@@ -1,0 +1,211 @@
+<template>
+  <div class='body-color'>
+    
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.switch{
+  position: relative;
+  display: block;
+  width: 6em;
+  height: 3em;
+  border: 7px solid rgba(146, 0, 0, 0.5);
+  border-radius: 2em;
+  transition: all 0.3s;
+  cursor: pointer;
+  /* background: grey; */
+}
+.switch::after{
+  content: '';
+  position: absolute;
+  width: 3em;
+  height: 90%;
+  background: rgba(146, 0, 0, 0.5);
+  border-radius: 2em;
+  left: 2.5px;
+  top: 2.5px;
+  transition: all 0.3s;
+}
+
+#toggle {
+  display: none;
+}
+#toggle:checked + .switch::after{
+  left: 45px;
+  background: rgba(0, 144, 24, 0.5);
+}
+#toggle:checked + .switch{
+  border-color: rgba(0, 144, 24, 0.5);
+}
+
+.toggle-bg{
+  background: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  height: 200px;
+  border-radius: 2em;
+  
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.color-bg{
+  background: white;
+  margin-top: 50px;
+  /* height: 90%; */
+  height: 850px;
+  width: 90vw;
+  max-width: 750px;
+  border-radius: 2em;
+
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.slider{
+  -webkit-appearance: none;
+  width: 75%;
+  height: 25px;
+  background: #ececec;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 2em;
+  border: black solid 1px;
+}
+.slider:hover{
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: black;
+  cursor: pointer;
+  border-radius: 2em;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: black;
+  cursor: pointer;
+  border-radius: 2em;
+}
+.preview-color{
+  content: '';
+  background: hsl(0, 100%, 50%);
+  width: 50%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  margin-top: 50px;
+
+  border: 1px solid black;
+  border-radius: 2em;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+button{
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  padding-top: 5px;
+
+  width: 100px;
+  height: 50px;
+
+  border-radius: 2em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+
+  border: 7px solid rgba(0, 98, 144, 0.5);
+  transition: all .3s;
+  outline: none;
+}
+button:hover{
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 98, 144, 0.5);
+  cursor: pointer;
+}
+
+
+img {
+  width: 100%;
+  max-width: 750px;
+  margin-left: -250px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.img-bg {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.white-line-bottom {
+  z-index: -1;
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  background: white;
+  height: 200px;
+  width: 200vw;
+  
+}
+
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.body-color{
+  background: rgba(0, 0, 0, 0.9);
+  transition:  all 1s;
+}
+h1{
+  display: flex;
+  justify-content: center;
+}
+h3{
+  padding-left: 12.5%;
+}
+
+.break{
+  flex-basis: 100%;
+  height: 0;
+}
+</style>
